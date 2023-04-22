@@ -1,0 +1,492 @@
+felix@feltech:~$ python3.10
+Python 3.10.6 (main, Nov 14 2022, 16:10:14) [GCC 11.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> # Avoiding index errors when working with lists
+>>> print(Segs_friends)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'Segs_friends' is not defined
+>>> print('Segs_friends')
+Segs_friends
+>>> print(Segs_friends)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'Segs_friends' is not defined
+>>> print(invite)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'invite' is not defined
+>>> Segs_friends = ['jide', 'tayo','lara', 'tolani','florence','gerarld','kelvin','chris','tom','jephtar','lucus','thompson']
+>>> 
+>>> print (Segs_friends)
+['jide', 'tayo', 'lara', 'tolani', 'florence', 'gerarld', 'kelvin', 'chris', 'tom', 'jephtar', 'lucus', 'thompson']
+>>> print(Segs_friends[5])
+gerarld
+>>> print(Segs_friends[-0])
+jide
+>>> print(Segs_friends[-1])
+thompson
+>>> print(Segs_friends[-2])
+lucus
+>>> # working with lists
+>>> 
+>>> Segs_friends = ['jide', 'tayo','lara', 'tolani','florence','gerarld','kelvin','chris','tom','jephtar','lucus','thompson']
+>>> for Segs_friend in Segs_friends:
+...     print(Segs_friend)
+... 
+jide
+tayo
+lara
+tolani
+florence
+gerarld
+kelvin
+chris
+tom
+jephtar
+lucus
+thompson
+>>> 
+>>> carlist = ['cookies','union','louver','kingkong','munchie','munchie crunchie','loiloi',]
+>>> 
+>>> for cars in carlist:
+...     print(car)
+... 
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+NameError: name 'car' is not defined. Did you mean: 'cars'?
+>>> 
+>>> carlists = ['cookies','union','louver','kingkong','munchie','munchie crunchie','loiloi']
+>>> 
+>>> for carlist in carlists
+  File "<stdin>", line 1
+    for carlist in carlists
+                           ^
+SyntaxError: expected ':'
+>>> for carlist in carlists:
+... print(carlist)
+  File "<stdin>", line 2
+    print(carlist)
+    ^
+IndentationError: expected an indented block after 'for' statement on line 1
+>>>     print(carlist)
+  File "<stdin>", line 1
+    print(carlist)
+IndentationError: unexpected indent
+>>> 
+>>> for carlist in carlists:
+...     print(carlist)
+... 
+cookies
+union
+louver
+kingkong
+munchie
+munchie crunchie
+loiloi
+>>> 
+>>> print(Segs_friends)
+['jide', 'tayo', 'lara', 'tolani', 'florence', 'gerarld', 'kelvin', 'chris', 'tom', 'jephtar', 'lucus', 'thompson']
+>>> 
+>>> print(carlists)
+['cookies', 'union', 'louver', 'kingkong', 'munchie', 'munchie crunchie', 'loiloi']
+>>> print(carlists)(Segs_friends)
+['cookies', 'union', 'louver', 'kingkong', 'munchie', 'munchie crunchie', 'loiloi']
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'NoneType' object is not callable
+>>> print(carlists) (Segs_friends)
+['cookies', 'union', 'louver', 'kingkong', 'munchie', 'munchie crunchie', 'loiloi']
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'NoneType' object is not callable
+>>> 
+>>> # A closer look at looping 
+>>> for Sege_friend in Sege_friends:
+...     print(f'{Segs_friend.upper()}, that was a great trick!')
+... 
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'Sege_friends' is not defined. Did you mean: 'Segs_friends'?
+>>> 
+>>> Segs_friends = ['jide', 'tayo','lara', 'tolani','florence','gerarld','kelvin','chris','tom','jephtar','lucus','thompson']
+>>> for Segs_friend in Segs_friends:
+...     print(f'{Segs_friend.upper()}, we are waiting for you at home now!')
+... 
+JIDE, we are waiting for you at home now!
+TAYO, we are waiting for you at home now!
+LARA, we are waiting for you at home now!
+TOLANI, we are waiting for you at home now!
+FLORENCE, we are waiting for you at home now!
+GERARLD, we are waiting for you at home now!
+KELVIN, we are waiting for you at home now!
+CHRIS, we are waiting for you at home now!
+TOM, we are waiting for you at home now!
+JEPHTAR, we are waiting for you at home now!
+LUCUS, we are waiting for you at home now!
+THOMPSON, we are waiting for you at home now!
+>>> 
+>>> print(carlist)
+loiloi
+>>> carlists = ['cookies','union','louver','kingkong','munchie','munchie crunchie','loiloi']
+>>> for carlist in carlists:
+...     print(f'{carlist.upper()}, is the best product in town for past 10 decades now.')
+... 
+COOKIES, is the best product in town for past 10 decades now.
+UNION, is the best product in town for past 10 decades now.
+LOUVER, is the best product in town for past 10 decades now.
+KINGKONG, is the best product in town for past 10 decades now.
+MUNCHIE, is the best product in town for past 10 decades now.
+MUNCHIE CRUNCHIE, is the best product in town for past 10 decades now.
+LOILOI, is the best product in town for past 10 decades now.
+>>> 
+>>> carlists = ['cookies','union','louver','kingkong','munchie','munchie crunchie','loiloi']
+>>> for carlist in carlists:
+...     print(f'{carlist.upper()}, is the best product in town for past 10 decades now.')
+...     print(f'and as far as am concerned i would not hesitate to pertronize {carlist.upper()} again and again.')
+... 
+COOKIES, is the best product in town for past 10 decades now.
+and as far as am concerned i would not hesitate to pertronize COOKIES again and again.
+UNION, is the best product in town for past 10 decades now.
+and as far as am concerned i would not hesitate to pertronize UNION again and again.
+LOUVER, is the best product in town for past 10 decades now.
+and as far as am concerned i would not hesitate to pertronize LOUVER again and again.
+KINGKONG, is the best product in town for past 10 decades now.
+and as far as am concerned i would not hesitate to pertronize KINGKONG again and again.
+MUNCHIE, is the best product in town for past 10 decades now.
+and as far as am concerned i would not hesitate to pertronize MUNCHIE again and again.
+MUNCHIE CRUNCHIE, is the best product in town for past 10 decades now.
+and as far as am concerned i would not hesitate to pertronize MUNCHIE CRUNCHIE again and again.
+LOILOI, is the best product in town for past 10 decades now.
+and as far as am concerned i would not hesitate to pertronize LOILOI again and again.
+>>> 
+>>> 
+>>> carlists = ['cookies','union','louver','kingkong','munchie','munchie crunchie','loiloi']
+>>> for carlist in carlists:
+...     print(f'{carlist.upper()}, is the best product in town for past 10 decades now.')
+...     print(f'and as far as am concerned i would not hesitate to pertronize {carlist.upper()} again and again.\n')
+... 
+COOKIES, is the best product in town for past 10 decades now.
+and as far as am concerned i would not hesitate to pertronize COOKIES again and again.
+
+UNION, is the best product in town for past 10 decades now.
+and as far as am concerned i would not hesitate to pertronize UNION again and again.
+
+LOUVER, is the best product in town for past 10 decades now.
+and as far as am concerned i would not hesitate to pertronize LOUVER again and again.
+
+KINGKONG, is the best product in town for past 10 decades now.
+and as far as am concerned i would not hesitate to pertronize KINGKONG again and again.
+
+MUNCHIE, is the best product in town for past 10 decades now.
+and as far as am concerned i would not hesitate to pertronize MUNCHIE again and again.
+
+MUNCHIE CRUNCHIE, is the best product in town for past 10 decades now.
+and as far as am concerned i would not hesitate to pertronize MUNCHIE CRUNCHIE again and again.
+
+LOILOI, is the best product in town for past 10 decades now.
+and as far as am concerned i would not hesitate to pertronize LOILOI again and again.
+
+>>> 
+>>> 
+>>> Segs_friends = ['jide', 'tayo','lara', 'tolani','florence','gerarld','kelvin','chris','tom','jephtar','lucus','thompson']
+>>> for Segs_friend in Segs_friends:
+...     print(f'{Segs_friend.upper()}, we are waiting for you at home now!')
+...     print(f'and {Segs_friend.upper()}, please do not forget to inform the relevant autorithies today.\n')
+... 
+JIDE, we are waiting for you at home now!
+and JIDE, please do not forget to inform the relevant autorithies today.
+
+TAYO, we are waiting for you at home now!
+and TAYO, please do not forget to inform the relevant autorithies today.
+
+LARA, we are waiting for you at home now!
+and LARA, please do not forget to inform the relevant autorithies today.
+
+TOLANI, we are waiting for you at home now!
+and TOLANI, please do not forget to inform the relevant autorithies today.
+
+FLORENCE, we are waiting for you at home now!
+and FLORENCE, please do not forget to inform the relevant autorithies today.
+
+GERARLD, we are waiting for you at home now!
+and GERARLD, please do not forget to inform the relevant autorithies today.
+
+KELVIN, we are waiting for you at home now!
+and KELVIN, please do not forget to inform the relevant autorithies today.
+
+CHRIS, we are waiting for you at home now!
+and CHRIS, please do not forget to inform the relevant autorithies today.
+
+TOM, we are waiting for you at home now!
+and TOM, please do not forget to inform the relevant autorithies today.
+
+JEPHTAR, we are waiting for you at home now!
+and JEPHTAR, please do not forget to inform the relevant autorithies today.
+
+LUCUS, we are waiting for you at home now!
+and LUCUS, please do not forget to inform the relevant autorithies today.
+
+THOMPSON, we are waiting for you at home now!
+and THOMPSON, please do not forget to inform the relevant autorithies today.
+
+>>> print('Thank you, for everything you have done.')
+Thank you, for everything you have done.
+>>> 
+>>> 
+>>> Segs_friends = ['jide', 'tayo','lara', 'tolani','florence','gerarld','kelvin','chris','tom','jephtar','lucus','thompson']
+>>> for Segs_friend in Segs_friends:
+...     print(f'{Segs_friend.upper()}, we are waiting for you at home now!')
+...     print(f'and {Segs_friend.upper()}, please do not forget to inform the relevant autorithies today.\n')
+... print('Thank you, for everything you have done.')
+  File "<stdin>", line 4
+    print('Thank you, for everything you have done.')
+    ^^^^^
+SyntaxError: invalid syntax
+>>> 
+
+>>> # range functions
+>>> for val in range (0,8)
+  File "<stdin>", line 1
+    for val in range (0,8)
+                          ^
+SyntaxError: expected ':'
+>>> 
+>>> for val in range (0,8):
+...     print(val)
+... 
+0
+1
+2
+3
+4
+5
+6
+7
+>>> # make a list of numbers
+>>> for vals in (range (0,8))
+  File "<stdin>", line 1
+    for vals in (range (0,8))
+                             ^
+SyntaxError: expected ':'
+>>>  vals= (range (0,8))
+  File "<stdin>", line 1
+    vals= (range (0,8))
+IndentationError: unexpected indent
+>>> 
+>>>  vals= list (range (0,8))
+  File "<stdin>", line 1
+    vals= list (range (0,8))
+IndentationError: unexpected indent
+>>>  vals= list (range(0,8))
+  File "<stdin>", line 1
+    vals= list (range(0,8))
+IndentationError: unexpected indent
+>>>  vals= list (range(0, 8))
+  File "<stdin>", line 1
+    vals= list (range(0, 8))
+IndentationError: unexpected indent
+>>>  vals = list (range(0, 8))
+  File "<stdin>", line 1
+    vals = list (range(0, 8))
+IndentationError: unexpected indent
+>>>  vals = list(range(0, 8))
+  File "<stdin>", line 1
+    vals = list(range(0, 8))
+IndentationError: unexpected indent
+>>> nums = list(range(0, 8))
+>>> num = list(range(9, 0))
+>>> print(nums)
+[0, 1, 2, 3, 4, 5, 6, 7]
+>>> print(num)
+[]
+>>> num = list(range(9, 30))
+>>> print(num)
+[9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29]
+>>> clark =list(range(1, 6))
+>>> print(clark)
+[1, 2, 3, 4, 5]
+>>> 
+>>> tajudeen =list(range(6, 16, 3))
+>>> print(tajudeen)
+[6, 9, 12, 15]
+>>> 
+>>> # Squares.py, using square in list Range function.
+>>> 
+>>> squares=[]
+>>> for cop in range(2, 15):
+...     square=cop**3
+...     squares.append(square)
+... 
+>>> print(squares)
+[8, 27, 64, 125, 216, 343, 512, 729, 1000, 1331, 1728, 2197, 2744]
+>>> 
+>>> squares=[]
+>>> for nak in range(1, 14):
+...     square=nak**3
+...     squares.append(square)
+... 
+>>> print(squares)
+[1, 8, 27, 64, 125, 216, 343, 512, 729, 1000, 1331, 1728, 2197]
+>>> 
+>>> squares=[]
+>>> for pro in range(2, 10):
+...     square=pro**1
+...     squares.append(square)
+... 
+>>> print(squares)
+[2, 3, 4, 5, 6, 7, 8, 9]
+>>> 
+>>> squares=[]
+>>> for pro in range(2, 10):
+...     square=pro**2
+...     squares.append(square)
+... 
+>>> print(squares)
+[4, 9, 16, 25, 36, 49, 64, 81]
+>>> 
+>>> # Simple Statistics with a list of Numbers
+>>> digits =[2,3,4,5,6,7,8,9,12,14]
+>>> mim(digits)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'mim' is not defined. Did you mean: 'min'?
+>>> digits =[2,3,4,5,6,7,8,9,12,14]
+>>> min(digits)
+2
+>>> max(digits)
+14
+>>> sum(digits)
+70
+>>> 
+>>> digits =[2,3,4,5,6,7,8,9,12,14,15,24,35,23,26,27,28,29,30,31,32,33,34,35,36,344,654,43,66,54,22,75,32,78,89,698,5678]
+>>> min(digits)
+2
+>>> max(digits)
+5678
+>>> sum(digits)
+8341
+>>> 
+>>> # LIST Comprehensions
+>>> 
+>>> squares = [val**2 for val in range(1,11)]
+>>> print(squares)
+[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+>>> square = [vels ** 4 for vels in range(2, 10)]
+>>> print(square)
+[16, 81, 256, 625, 1296, 2401, 4096, 6561]
+>>> 
+
+# WORKING WITH PART OF A LIST
+#slicing a list.
+players = ['judas','carroten','fikunmi','tosin','martines']
+print(players[0:3])
+
+
+>>> players = ['judas','carroten','fikunmi','tosin','martines']
+>>> print(players[0:3])
+['judas', 'carroten', 'fikunmi']
+>>> 
+>>> teammates = ['judas','carroten','fikunmi','tosin','martines']
+>>> print(teammates[0:2])
+['judas', 'carroten']
+>>> 
+>>> teammate =['judas','carroten','fikunmi','tosin','martines','smith','clarks']
+>>> print(teammate[1:3])
+['carroten', 'fikunmi']
+>>> 
+>>> teammate =['judas','carroten','fikunmi','tosin','martines','smith','clarks']
+>>> print(teammate[3:3])
+[]
+>>> print(teammate[3:4])
+['tosin']
+>>> print(teammate[:4])
+['judas', 'carroten', 'fikunmi', 'tosin']
+>>> print(teammate[4:])
+['martines', 'smith', 'clarks']
+>>> print(teammate[0:])
+['judas', 'carroten', 'fikunmi', 'tosin', 'martines', 'smith', 'clarks']
+>>> 
+>>> print(teammate[-0:])
+['judas', 'carroten', 'fikunmi', 'tosin', 'martines', 'smith', 'clarks']
+>>> print(teammate[-4:])
+['tosin', 'martines', 'smith', 'clarks']
+>>> 
+>>> # Looping through a slice
+>>> print('here are the first three teammate on my player:')
+here are the first three teammate on my player:
+>>> print('here are the first three teammate on my team:')
+here are the first three teammate on my team:
+>>> for teammate in teammate[:3]:
+...     print(teammate.upper())
+... 
+JUDAS
+CARROTEN
+FIKUNMI
+>>> 
+
+>>> Segs_friends = ['jide', 'tayo','lara', 'tolani','florence','gerarld','kelvin','chris','tom','jephtar','lucus','thompson']
+>>> Segs_friends.append'kolitin'
+  File "<stdin>", line 1
+    Segs_friends.append'kolitin'
+                       ^^^^^^^^^
+SyntaxError: invalid syntax
+>>> Segs_friends.append 'kolitin'
+  File "<stdin>", line 1
+    Segs_friends.append 'kolitin'
+                        ^^^^^^^^^
+SyntaxError: invalid syntax
+>>> Segs_friends.append (kolitin)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'kolitin' is not defined
+>>> 
+>>> Segs_friends.append "kolitin"
+  File "<stdin>", line 1
+    Segs_friends.append "kolitin"
+                        ^^^^^^^^^
+SyntaxError: invalid syntax
+>>> 
+>>> Segs_friends.append.'kolitin'
+  File "<stdin>", line 1
+    Segs_friends.append.'kolitin'
+                        ^^^^^^^^^
+SyntaxError: invalid syntax
+>>> Segs_friends.append('kolitin')
+>>> 
+>>> Segs_friends.append('kalu')
+>>> Segs_friends.append('toyin'upper())
+  File "<stdin>", line 1
+    Segs_friends.append('toyin'upper())
+                        ^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+>>> 
+>>> Segs_friends.append('toyin'.upper())
+>>> 
+>>> Segs_friends.insert(6,'funmi iyanda'.upper())
+>>> 
+>>> Segs_friends.insert(6,'kokumo'.upper())
+>>> 
+>>> print(Segs_friends)
+['jide', 'tayo', 'lara', 'tolani', 'florence', 'gerarld', 'KOKUMO', 'FUNMI IYANDA', 'kelvin', 'chris', 'tom', 'jephtar', 'lucus', 'thompson', 'kolitin', 'kalu', 'TOYIN']
+>>> 
+>>> print(Segs_friends[:10])
+['jide', 'tayo', 'lara', 'tolani', 'florence', 'gerarld', 'KOKUMO', 'FUNMI IYANDA', 'kelvin', 'chris']
+>>> 
+>>> print(Segs_friends[4:1])
+[]
+>>> 
+>>> print(Segs_friends[1:4])
+['tayo', 'lara', 'tolani']
+>>> 
+>>> print(Segs_friends[5:9])
+['gerarld', 'KOKUMO', 'FUNMI IYANDA', 'kelvin']
+>>> 
+>>> print(Segs_friends[4:-1])
+['florence', 'gerarld', 'KOKUMO', 'FUNMI IYANDA', 'kelvin', 'chris', 'tom', 'jephtar', 'lucus', 'thompson', 'kolitin', 'kalu']
+>>> 
+>>> print(Segs_friends[4:-0])
+[]
+>>> 
+>>> print(Segs_friends[-4:-2])
+['thompson', 'kolitin']
